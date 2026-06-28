@@ -262,7 +262,7 @@ def main():
         "-d",
         "--default",
         action="store_true",
-        help="Retorna as propriedades padrão: \n type, \n key, \n summary, \n created, \n assignee, \n status, \n priority \n"
+        help="Retorna as propriedades padrão: \n type, \n key, \n summary, \n due, \n created, \n assignee, \n status, \n priority \n"
     )
 
     args = parser.parse_args()
@@ -271,7 +271,7 @@ def main():
 
     if args.default:
         print("[INFO] Modo default ativado")
-        propriedades = ["type", "key", "summary", "created", "assignee", "status", "priority"]
+        propriedades = ["type", "key", "summary", "due", "created", "assignee", "status", "priority"]
     else:
         propriedades = args.propriedades.split("/")
 
